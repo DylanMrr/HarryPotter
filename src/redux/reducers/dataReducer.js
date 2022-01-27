@@ -1,7 +1,7 @@
 const initialState = {
     error: null,
     data: {},
-    loading: false
+    loading: true
 }
 
 const REQUESTED_DATA = 'REQUESTED_DATA'
@@ -9,7 +9,7 @@ const REQUESTED_DATA_FAILED = 'REQUESTED_DATA_FAILED'
 const REQUESTED_DATA_SUCCEEDED = 'REQUESTED_DATA__SUCCEEDED'
 
 const actions = {
-    getData: () => async (dispatch) => {
+    getData: () => async (dispatch) => {      
         dispatch(actions.requestData)
         try {
             const response = await fetch('http://hp-api.herokuapp.com/api/characters')
@@ -49,6 +49,7 @@ export default function dataReducer(state = initialState, action) {
                 error: action.payload
             }
         case REQUESTED_DATA_SUCCEEDED:
+            console.log(action.payload)
             return {
                 data: action.payload,
                 loading: false,

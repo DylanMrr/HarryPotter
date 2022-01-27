@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  background: url('https://fanfics.me/images/fanart/2020/05/17/4494271589722070.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .App-logo {
