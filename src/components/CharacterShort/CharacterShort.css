@@ -1,0 +1,30 @@
+.characterShort{
+    width: 270px;
+    display: flex;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.characterShort > img{
+    max-height: 200px;
+    margin:10px;
+}
+
+.characterShort:hover{
+    background-color: gray;
+}
+
+.characterShort__info{
+    margin-top: 20px;
+}
+
+.characterShort__name{
+    color: lightgrey;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.characterShort__house{
+
+}

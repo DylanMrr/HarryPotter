@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import {getData} from '../../redux/reducers/dataReducer'
 import Character from '../Character/Character';
+import CharacterShort from "../CharacterShort/CharacterShort";
 
 import './MainPage.css'
 
@@ -29,8 +30,11 @@ export default () => {
         </div>
         )
     }
-    return data.data.map(item => (<Character name={item.name} house={item.house} imageurl={item.image}/>))
-    return(<></>)
+    return (
+        <div className="mainpage__characters">
+            {data.data.map(item => item.image && (<CharacterShort name={item.name} house={item.house} imageurl={item.image}/>))}
+        </div>
+    )
     /*return (
         <div className="App">
         <div>
