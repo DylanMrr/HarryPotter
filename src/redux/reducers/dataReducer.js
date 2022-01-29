@@ -49,7 +49,6 @@ export default function dataReducer(state = initialState, action) {
                 error: action.payload
             }
         case REQUESTED_DATA_SUCCEEDED:
-            console.log(action.payload)
             return {
                 data: action.payload,
                 loading: false,

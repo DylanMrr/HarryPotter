@@ -1,7 +1,7 @@
 .header{
     position: sticky;
     z-index: 1;
-    top: 0;
+    top: 0; 
     height: 100px;
     width: 100%;
     display: flex;
@@ -15,5 +15,14 @@
     width: 1050px;
     height: 100%;
     border-radius: 0 0 20px 20px;
-    color: white
+    color: white;
+    display: flex;
+}
+
+.header__wrapper > a{
+    color: white;
+}
+
+.header__wrapper > a:hover{
+    color:wheat;
 }
