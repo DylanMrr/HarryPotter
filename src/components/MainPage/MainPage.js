@@ -3,10 +3,17 @@ import {useSelector, useDispatch} from "react-redux";
 import {getData} from '../../redux/reducers/dataReducer'
 import Character from '../Character/Character';
 import CharacterShort from "../CharacterShort/CharacterShort";
+import { useNavigate } from "react-router-dom";
 
 import './MainPage.css'
 
 export default () => {
+
+    const navigate = useNavigate()
+    const onElementClick = (name) => {
+        navigate(`/person/${name}`)
+    }
+
     const dispatch = useDispatch();
     useEffect(() => {
 		dispatch(getData());
@@ -31,7 +38,7 @@ export default () => {
     }
     return (
         <div className="mainpage__characters">
-            {data.data.map(item => item.image && (<CharacterShort name={item.name} house={item.house} imageurl={item.image}/>))}
+            {data.data.map(item => item.image && (<CharacterShort name={item.name} house={item.house} imageurl={item.image} onclick={onElementClick}/>))}
         </div>
     )
 }

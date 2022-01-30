@@ -2,7 +2,7 @@ import React from "react";
 
 import './CharacterShort.css'
 
-export default ({name, house, imageurl}) => {
+export default ({name, house, imageurl, onclick}) => {
     
     const getColor = (house) => {
         switch (house){
@@ -15,7 +15,7 @@ export default ({name, house, imageurl}) => {
     } 
     
     return (
-        <div className="characterShort">
+        <div className="characterShort" onClick={() => onclick(name)}>
             <img src={imageurl} />
             <div className="characterShort__info">
                 <div className="characterShort__name">

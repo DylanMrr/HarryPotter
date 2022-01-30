@@ -4,6 +4,7 @@ import React, {useEffect} from "react";
 import Header from './components/Header/Header';
 import MainPageWrapper from './pages/MainPageWrapper/MainPageWrapper';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MainPage from './components/MainPage/MainPage';
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
         <Header />
         
         <Routes>
-          <Route path="/" element={<MainPageWrapper />}/>
+          <Route path="/" element={<MainPageWrapper Child="/"/>}/>
+          <Route path = "/person/:name" element={<MainPageWrapper Child="/person/:name"/>} />
         </Routes>
       </BrowserRouter> 
     </div>
