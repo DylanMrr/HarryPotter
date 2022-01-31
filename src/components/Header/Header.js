@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useRandomCharacter } from "../../api/personApi";
 
 import './Header.css'
 
@@ -12,7 +13,11 @@ export default () => {
                         Главная 
                     </div>
                 </Link>
-                Случайный персонаж
+                <Link to={`/person/${useRandomCharacter()}`} style={{textDecoration: "none"}}>
+                    <div>
+                        Случайный персонаж
+                    </div>
+                </Link>
                 Поиск
                 Все персонажи
             </div>
