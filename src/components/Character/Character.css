@@ -1,3 +1,28 @@
 .character{
-    
+    display: flex;
+    margin: 50px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.character__info{
+    flex: 1;
+    flex-direction: column;
+}
+
+.character__name{
+    color: lightgrey;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.character__house{
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+.characterShort > img{
+    max-height: 400px;
+    max-width: 240px;
+    margin:10px;
 }

@@ -38,7 +38,7 @@ export default () => {
     }
     return (
         <div className="mainpage__characters">
-            {data.data.map(item => item.image && (<CharacterShort name={item.name} house={item.house} imageurl={item.image} onclick={onElementClick}/>))}
+            {data.data.map(item => item.image && (<CharacterShort key={item.name} name={item.name} house={item.house} imageurl={item.image} onclick={onElementClick}/>))}
         </div>
     )
 }
