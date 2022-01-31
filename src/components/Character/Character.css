@@ -21,8 +21,8 @@
     font-size: 22px;
 }
 
-.characterShort > img{
-    max-height: 400px;
-    max-width: 240px;
+.character > img{
+    max-height: 500px;
+    max-width: 340px;
     margin:10px;
 }
