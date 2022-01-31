@@ -1,8 +1,12 @@
 .character{
     display: flex;
-    margin: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 170px;
+    margin-top: -70px;
     align-items: center;
     justify-content: flex-start;
+    height: 74.69vh;
 }
 
 .character__info{
@@ -25,4 +29,5 @@
     max-height: 500px;
     max-width: 340px;
     margin:10px;
+    top: 0;
 }
