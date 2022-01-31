@@ -12,22 +12,46 @@
 .character__info{
     flex: 1;
     flex-direction: column;
+    margin-top: 10px;
+    margin-left: 120px;
+    margin-right: 100px;
+    background-color:rgba(119, 116, 112, 0.836);
+    border-radius: 10px;
+}
+
+.character__info__child{
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.character__info__item{
+    padding-bottom: 10px;
+    text-align: start;
+    font-size: 20px;
 }
 
 .character__name{
     color: lightgrey;
     font-size: 30px;
     font-weight: bold;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .character__house{
     font-weight: bolder;
     font-size: 22px;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .character > img{
-    max-height: 500px;
-    max-width: 340px;
+    max-height: 340px;
+    max-width: 240px;
     margin:10px;
     top: 0;
+}
+
+.character__info__alive{
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #000;
 }

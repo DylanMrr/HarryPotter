@@ -20,39 +20,41 @@ export default () => {
         <div className="character">
             <img src={data.imageUrl} />
             <div className="character__info">
-                <div className="character__name">
-                    {data.name}
-                </div>
-                <div style={{color: getHouseColor(data.house)}} className="character__house">
-                    {data.house}
-                </div>
-                <div>
-                    Дата рождения - {data.dateOfBirth}
-                </div>
-                {
-                    (data.staff || data.student) && 
-                    <div>
-                        {data.staff 
-                            ? <div>Преподаватель</div> 
-                            : (data.student 
-                                ? <div>Студент</div> 
-                                : "")} 
+                <div className="character__info__child">
+                    <div className="character__name character__info__item">
+                        {data.name}
                     </div>
-                }
-                <div>
-                    {data.wizard 
-                        ? <div>Волшебник</div> 
-                        : <div>Маггл</div>
+                    <div style={{color: getHouseColor(data.house)}} className="character__house character__info__item">
+                        {data.house}
+                    </div>
+                    <div className="character__info__item">
+                        Дата рождения: {data.dateOfBirth}
+                    </div>
+                    {
+                        (data.staff || data.student) && 
+                        <div className="character__info__item">
+                            {data.staff 
+                                ? <div>Преподаватель</div> 
+                                : (data.student 
+                                    ? <div>Студент</div> 
+                                    : "")} 
+                        </div>
                     }
-                </div>
-                <div>
-                    {data.alive
-                        ? <div style={{color: "green"}}>Жив</div>
-                        : <div style={{color: "red"}}>Мертв</div>
-                    }
-                </div>
-                <div>
-                    Патронус - {data.patronus ? data.patronus : "Неизвестно"}
+                    <div className="character__info__item">
+                        {data.wizard 
+                            ? <div>Волшебник</div> 
+                            : <div>Маггл</div>
+                        }
+                    </div>
+                    <div className="character__info__item character__info__alive">
+                        {data.alive
+                            ? <div style={{color: "green"}}>Жив</div>
+                            : <div style={{color: "red"}}>Мертв</div>
+                        }
+                    </div>
+                    <div className="character__info__item">
+                        Патронус - {data.patronus ? data.patronus : "Неизвестно"}
+                    </div>
                 </div>
             </div>
         </div>

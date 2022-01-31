@@ -24,9 +24,11 @@
     color: lightgrey;
     font-size: 20px;
     font-weight: bold;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .characterShort__house{
     margin-top: 60px;
     font-weight: bolder;
+    text-shadow: 1px 1px 1px #000;
 }
