@@ -1,10 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useRandomCharacter } from "../../api/personApi";
 
 import './Header.css'
 
 export default () => {
+
+    const navigate = useNavigate()
+    const random = useRandomCharacter()
+
     return (
         <div className="header">
             <div className="header__wrapper">
@@ -13,7 +17,7 @@ export default () => {
                         Главная 
                     </div>
                 </Link>
-                <Link to={`/person/${useRandomCharacter()}`} style={{textDecoration: "none"}}>
+                <Link to={`/person/${random}`} style={{textDecoration: "none"}}>
                     <div>
                         Случайный персонаж
                     </div>
