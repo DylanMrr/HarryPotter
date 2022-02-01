@@ -1,4 +1,5 @@
 import React from "react";
+import AllCharacters from "../../components/AllCharacters/AllCharacters";
 import Character from "../../components/Character/Character";
 import MainPage from '../../components/MainPage/MainPage';
 
@@ -10,6 +11,7 @@ export default ({Child}) => {
         switch (Child){
             case "/": return <MainPage />
             case "/person/:name": return <Character />
+            case "/all": return <AllCharacters />
         }
     }
 

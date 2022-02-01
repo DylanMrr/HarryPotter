@@ -22,8 +22,12 @@ export default () => {
                         Случайный персонаж
                     </div>
                 </Link>
+                <Link to={`/all`} style={{textDecoration: "none"}}>
+                    <div>
+                        Все персонажи
+                    </div>
+                </Link>
                 Поиск
-                Все персонажи
             </div>
         </div>
     )

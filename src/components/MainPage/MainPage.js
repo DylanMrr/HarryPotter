@@ -1,7 +1,5 @@
 import React, {useEffect} from "react";
 import {useSelector, useDispatch} from "react-redux";
-import {getData} from '../../redux/reducers/dataReducer'
-import Character from '../Character/Character';
 import CharacterShort from "../CharacterShort/CharacterShort";
 import { useNavigate } from "react-router-dom";
 
@@ -13,11 +11,6 @@ export default () => {
     const onElementClick = (name) => {
         navigate(`/person/${name}`)
     }
-
-    const dispatch = useDispatch();
-    useEffect(() => {
-		dispatch(getData());
-	}, [dispatch]);
 
     const data = useSelector((state) => state.data)
     const loading = data.loading
