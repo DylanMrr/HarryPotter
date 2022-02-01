@@ -13,21 +13,20 @@ export default () => {
         <div className="header">
             <div className="header__wrapper">
                 <Link to="/" style={{textDecoration: "none"}}>
-                    <div>
+                    <div className="header__left header__item">
                         Главная 
                     </div>
                 </Link>
                 <Link to={`/person/${random}`} style={{textDecoration: "none"}}>
-                    <div>
+                    <div className="header__item">
                         Случайный персонаж
                     </div>
                 </Link>
                 <Link to={`/all`} style={{textDecoration: "none"}}>
-                    <div>
+                    <div className="header__right header__item">
                         Все персонажи
                     </div>
                 </Link>
-                Поиск
             </div>
         </div>
     )
